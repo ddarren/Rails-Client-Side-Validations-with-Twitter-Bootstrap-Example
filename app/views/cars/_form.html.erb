@@ -1,0 +1,9 @@
+
+<%= simple_form_for @car, :validate => true  do |f| %>
+  <%= f.input :model, :label => 'Model'   %>
+  <%= f.input :make, :label => 'Make' %>
+  <%= f.input :year, :label => 'Year' %>
+ <br />
+ <%= f.button :submit, :value => "Add"%>
+<% end %>
+
