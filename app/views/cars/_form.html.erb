@@ -1,9 +1,10 @@
-
-<%= simple_form_for @car, :validate => true  do |f| %>
-  <%= f.input :model, :label => 'Model'   %>
-  <%= f.input :make, :label => 'Make' %>
-  <%= f.input :year, :label => 'Year' %>
- <br />
- <%= f.button :submit, :value => "Add"%>
+<%= simple_form_for @car, :validate => true , :html => { :class => 'form-horizontal' } do |f| %>
+  <%= f.input :model %>
+  <%= f.input :make %>
+  <%= f.input :year %>
+  <div class="form-actions">
+    <%= f.button :submit, :class => 'btn-primary' %>
+    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                cars_path, :class => 'btn' %>
+  </div>
 <% end %>
-
